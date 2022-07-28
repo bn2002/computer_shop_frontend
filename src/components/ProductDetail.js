@@ -8,8 +8,8 @@ const ProductDetail = () => {
     const [product, setProduct] = useState([]);
     const [selected, setSelected] = useState('');
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
+        
         axios.get(`/products/${productId}`).then(res => {
             if(res.data.status === true){
                 setProduct(res.data.data)

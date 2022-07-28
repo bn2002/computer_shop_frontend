@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../assets/user/css/Login.css'
 const Login = () => {
@@ -11,6 +11,13 @@ const Login = () => {
         e.preventDefault()
         setUser({...user, [e.target.name] : e.target.value})
     }
+
+    useEffect(() => {
+        if(localStorage.getItem('username')) {
+            navigate("/");
+            return;
+        }
+    }, [])
     const userList = [
         {
             username: "Mr.LHuynL_H55@yahoo.com",

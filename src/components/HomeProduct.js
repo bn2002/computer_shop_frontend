@@ -28,7 +28,7 @@ const HomeProduct = () => {
                     {
                         bestProduct.map((item, idx) => (
                             <div className="col mb-3"key={idx} prod_id={item.product_id}>
-                                <Link to = {`/product-detail/${item.product_id}`} className="product-item">
+                                <Link to = {`/products/${item.product_id}`} className="product-item">
                                     <span className="product-tag">Yêu thích</span>
                                     <img src={item.thumbnail_url} alt="" className="product-img"></img>
                                     <div className="product-name">{item.name}</div>
@@ -52,8 +52,8 @@ const HomeProduct = () => {
                     <h4 className="text-center col-md-12 mb-4" style={{color: '#fedf5a'}}>GIẢM GIÁ NHIỀU</h4>
                     {
                         saleProduct.map((item, idx) => (
-                            <div  className="col mb-3"key={idx} prod_id={item.id}>
-                                <Link to={`/products/${item.prod_id}`} className="product-item">
+                            <div  className="col mb-3"key={idx} prod_id={item.product_id}>
+                                <Link to={`/products/${item.product_id}`} className="product-item">
                                     <span className="product-tag">Yêu thích</span>
                                     <img src={item.thumbnail_url} alt="" className="product-img"></img>
                                     <div className="product-name">{item.name}</div>

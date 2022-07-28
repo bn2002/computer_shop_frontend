@@ -36,7 +36,7 @@ const CategoryProduct = () => {
                                     <span className="product-tag">Yêu thích</span>
                                     <img src={item.thumbnail_url} alt="" className="product-img"></img>
                                     <div className="product-name">{item.name}</div>
-                                    <div className="product-qtt">Còn {item.qtt} sản phẩm</div>
+                                    <div className="product-qtt">Còn {item.quantity} sản phẩm</div>
                                     <div className="row">
                                         <div className="product-old-price col-md-5">
                                         {Intl.NumberFormat('vi',{ style: 'currency', currency: 'VND' }).format(item.price)}
